@@ -6,20 +6,26 @@
 //    if(section ===".section-meals")
 // });
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-$(".js--section-features").waypoint(function(direction){
-if (direction == "down") {
-	document.write("Hello you made it");
-  $("nav").addClass("sticky");
-} 
-else{ $("nav").removeClass("sticky");
+// $(".js--section-features").waypoint(function(direction){
+// if (direction == "down") {
+// 	document.write("Hello you made it");
+//   $("nav").addClass("sticky");
+// } 
+// else{ $("nav").removeClass("sticky");
 
-}
+// }
 
-});
+// });
 
-
+$(window).scroll(function(){
+    	if ($(document).scrollTop() >600) {
+    		$("nav").addClass("sticky");}
+    		else{
+    			$("nav").removeClass("sticky");
+    		}
+        });
 // scroll on buttons
 // $(".js--scroll-to-plans"
 // ).click(function(){
